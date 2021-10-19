@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Death
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Enemy
+  - Water
+  - UI
+  - Player
+  - Limit
+  - MaskStation
+  - Virus
+  - Mob
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 140641741
+    locked: 0
+  - name: Big Bushes
+    uniqueID: 1238333549
+    locked: 0
+  - name: Tree
+    uniqueID: 1717093923
+    locked: 0
+  - name: Decorations
+    uniqueID: 2829861605
+    locked: 0
+  - name: Foreground
+    uniqueID: 830639709
+    locked: 0
+  - name: Houses
+    uniqueID: 3661449015
+    locked: 0
+  - name: Tomb
+    uniqueID: 4134216367
+    locked: 0
+  - name: Enemies
+    uniqueID: 2049931217
+    locked: 0
+  - name: Virus
+    uniqueID: 3345852653
+    locked: 0
+  - name: Player
+    uniqueID: 412924353
+    locked: 0
