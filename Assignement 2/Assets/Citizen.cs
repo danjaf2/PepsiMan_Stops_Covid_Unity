@@ -95,9 +95,9 @@ public class Citizen : MonoBehaviour
         // {
         //  Debug.Log(selectionList[i]);
         // }
-        InvokeRepeating("MoveAround", 2f, 2f);
+        InvokeRepeating("MoveAround", 0.5f, 2f);
         InvokeRepeating("RemoveMask", 5f, 5f);
-        InvokeRepeating("SpreadDisease", 5f, 3f);
+        InvokeRepeating("SpreadDisease", 2f, 3f);
         ChangeSprite();
         
     }

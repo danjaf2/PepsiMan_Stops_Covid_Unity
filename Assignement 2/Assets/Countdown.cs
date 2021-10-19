@@ -19,13 +19,22 @@ public class Countdown : MonoBehaviour
 
 
     public EnemySpawn[] spawners;
-    
+     List<EnemySpawn> list;
 
 
     // Start is called before the first frame update
     void Start()
     {
+
+        list = new List<EnemySpawn>();
         spawners = FindObjectsOfType<EnemySpawn>();
+        for (int i = 0; i < spawners.Length; i++)
+        {
+            if (spawners[i].isSpawner)
+            {
+                list.Add(spawners[i]);
+            }
+        }
         startingTime = 30;
         levelCleared = false;
         mobSpawn1 = Random.Range(5, startingTime-5);
@@ -47,17 +56,24 @@ public class Countdown : MonoBehaviour
 
         if (currentTime== mobSpawn1)
         {
-            Debug.Log("yo 1");
-            int index=Random.Range(0, spawners.Length);
-            spawners[index].SpawnMob();
-            mobSpawn1 = -10;
+            if (list.Count > 0)
+            {
+                Debug.Log("yo 1");
+                int index = Random.Range(0, list.Count);
+                list[index].SpawnMob();
+                mobSpawn1 = -10;
+            }
         }
         if (currentTime == mobSpawn2)
         {
-            Debug.Log("yo 2");
-            int index = Random.Range(0, spawners.Length);
-            spawners[index].SpawnMob();
-            mobSpawn2 = -10;
+            if (list.Count > 0)
+            {
+                Debug.Log("yo 2");
+                int index = Random.Range(0, list.Count);
+                list[index].SpawnMob();
+                mobSpawn2 = -10;
+            }
+            
         }
     }
     void UpdateTime()

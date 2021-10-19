@@ -156,6 +156,7 @@ public class GiveMasks : MonoBehaviour
     {
         if (!isGrabbing)
         {
+            int amountGiven = 0;
             Collider2D[] citizensInRange = Physics2D.OverlapCircleAll(centerPoint.position, givingRange, citizenLayer);
             int counter = 0;
             if (currentAmount == 0)
@@ -168,10 +169,15 @@ public class GiveMasks : MonoBehaviour
                 {
                     if (counter < 2)
                     {
+                        amountGiven++;
                         score++;
                         citizen.gameObject.GetComponent<Citizen>().editSprite(citizen.gameObject.GetComponent<Citizen>().getSprite() + 1);
                         currentAmount--;
                         fx.PlayOneShot(success);
+                        if (amountGiven >= 2)
+                        {
+                            score+=2;
+                        }
                         if (currentAmount == 0)
                         {
                             return;
